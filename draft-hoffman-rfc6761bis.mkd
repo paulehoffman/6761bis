@@ -1,0 +1,158 @@
+---
+title: Special-Use Domain Names Registry
+abbrev: Special-Use Domain Names Registry
+docname: draft-hoffman-rfc6761bis-pre00
+
+stand_alone: true
+v: 3
+obsoletes: 6761
+updates: 1918, 2606
+
+ipr: trust200902
+kw: Internet-Draft
+cat: std
+consensus: true
+submissionType: IETF
+
+pi:
+  toc: yes
+  tocdepth: 4
+  sortrefs: yes
+  symrefs: yes
+
+author:
+ -
+   ins: P. Hoffman
+   name: Paul Hoffman
+   org: ICANN
+   email: paul.hoffman@icann.org
+
+normative:
+  RFC5226:
+  RFC6761:
+  RFC8499:
+
+informative:
+  RFC1918:
+  RFC2606:
+  RFC6762:
+  RFC7686:
+
+--- abstract
+
+This document obsoletes RFC 6761 that created the Special-Use Domain Names registry at IANA for domain names that are reserved for special use.
+The registry has proved to be useful. RFC 6761 also has a description for when reserving such a name is appropriate,
+and the procedure for doing so; those descriptions have turned out to cause many problems in the IETF.
+Because of those problems, this document obsoletes RFC 6761 while retaining the registry
+and greatly reducing the rest of the discussion and requirements in RFC 6761. It places the responsibility for
+accepting Special-Use Domain Names entries with the IESG.
+
+
+--- middle
+
+# Introduction
+
+There is a long history of RFCs that reserve some domain names for private use.
+{{RFC2606}} reserved ".test", ".example", ".invalid", ".localhost", "example.com", "example.net", and "example.org",
+as well as all names below those names.
+It also created a registry at IANA called "special-use domain names"
+at <https://www.iana.org/assignments/special-use-domain-names>
+for those names and for future names assigned by the IETF.
+
+This document obsoletes {{RFC6761}}.
+It keeps the IANA registry and all its contents, but removes some of the requirements from RFC 6761 that were 
+sometimes ignored after RFC 6761 was published.
+It also has a brief discussion of what has happened since RFC 6761 was published.
+The intentions for these changes to RFC 6761 are to make it easier for the IESG to analyze proposals for inclusion
+in the registry, and to make the requirements match what the IESG is already doing.
+
+In this document, "domain name" means a name in the global DNS as defined in {{RFC8499}}.
+
+
+# Requirements for the Special-Use Domain Names Registry
+
+In order to be added to the Special-Use Domain Names registry, a domain name needs to be specified
+in an IETF "Standards Action" RFC or an "IESG Approval" specification. These terms are defined in {{RFC5226}}.
+A specification does not need to be an RFC. Both types of documents require IESG approval.
+
+RFC 6761 said that its process applied when a name required special handling in order to implement some desired new functionality.
+This document drops that requirement and the associated requirements for documenting all the types of special handling required.
+
+Of course, the IESG should require that all use case assumptions and requirements for the names added to the registry
+be wholly contained in the RFC or specification defining that name.
+However, the level of that requirement is controlled by the IESG, not this document.
+It is the IESG that decide whether to add new names that are top-level names (such as ".example"),
+or names at the second level of existing Special Domains (such as "example.arpa").
+
+
+# History of the Special-Use Domain Names Registry
+
+RFC 6761 contained the initial entries for the registry. Those were the names from {{RFC2606}} as well as
+"in-addr.arpa" names for the private IPv4 addresses in {{RFC1918}}: 10/8, 172.16/12, and 192.168/16.
+
+Immediately after RFC 6761 was published, {{RFC6762}} was published and contained entries for
+"254.169.in-addr.arpa", "8.e.f.ip6.arpa", "9.e.f.ip6.arpa", "a.e.f.ip6.arpa", and "b.e.f.ip6.arpa".
+It also contained the registration for ".local".
+All of these were placed in the Special-Use Domain Names registry.
+
+After that, the registry became contentious, with many parties asking to have top-level names that were related
+to their protocols added to the registry. In September 2014, the IAB issued a liaison statment,
+<https://datatracker.ietf.org/liaison/1351/>, to ICANN concerning the registry.
+That statement said in part:
+
+  Under its current charter, the DNSOP working group in the IETF is
+  responsible to review and clarify the overlap between (among other
+  things) the special names registry from RFC 6761 and the public DNS
+  root. This could include consideration of the problem of existing name
+  collisions, provision of additional guidelines, or further
+  modification to the process in RFC 6761 to reduce the potential for
+  collisions in the future.
+
+In that period, only one name, ".onion" {{RFC7686}} from October 2015, was added to the registry.
+Just before that, the IETF published a blog post, <https://www.ietf.org/blog/onion/>,
+It says in part:
+
+  ...the IESG believes RFC 6761 needs action, and substantial community
+  input. It needs to be open for review and modification because the
+  current process is unscalable. 
+
+However, after a great deal of effort, the DNSOP Working Group could not reach consensus on how to move forward with any names
+other than ".onion".
+The DNSOP WG and IESG can consider amending the DNSOP Working Group charter to remove the responsibility for
+special-use domain names from the charter.
+
+After that, the only names added to the registry were six names under ".arpa".
+Of those, only one RFC specifying those names followed the requirements in RFC 6761 for documenting
+all the types of special handling required.
+
+
+# IANA Considerations
+
+All entries in the Special-Use Domain Names registry that refer to RFC 6761 are updated to point to this document.
+
+Names can be added to this registry by the IETF after being specified in an IETF "Standards Action" RFC or an "IESG Approval" specification.
+
+The requirement from RFC 6761 that the specification must contain "Domain Name Reservation Considerations" is no longer required.
+It has not been consistently enforced by the IETF and IANA since 2015.
+
+
+# Security Considerations
+
+This document has the same security considerations as those expressed in RFC 6761:
+
+This document outlines the circumstances in which reserving a domain
+name for special use is appropriate, and the procedure for having
+that Special-Use Domain Name recorded by IANA.  Any document
+requesting such a Special-Use Domain Name needs to contain an
+appropriate "Security Considerations" section which describes any
+security issues relevant to that special use.
+
+
+--- back
+
+# Acknowledgements
+
+This document lifts many ideas from RFC 6761.
+Stuart Cheshire and Marc Krochmal deserve acknowledgement for the writing and the hard work
+that went into getting RFC 6761 through the IETF process.
+The members of the DNSOP Working Group who participated in the follow-up work on the registry also deserve acknowledgement.
