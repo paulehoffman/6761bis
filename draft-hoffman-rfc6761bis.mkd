@@ -1,7 +1,7 @@
 ---
 title: Special-Use Domain Names Registry
 abbrev: Special-Use Domain Names Registry
-docname: draft-hoffman-rfc6761bis-00
+docname: draft-hoffman-rfc6761bis-01
 
 stand_alone: true
 v: 3
