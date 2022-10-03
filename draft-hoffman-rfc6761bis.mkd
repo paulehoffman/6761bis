@@ -47,8 +47,7 @@ Because of those problems, this document obsoletes RFC 6761 while retaining the 
 and greatly reducing the rest of the discussion and requirements in RFC 6761. It places the responsibility for
 accepting Special-Use Domain Names entries with the IESG.
 
-\[ A repository for this draft can be found at <https://github.com/paulehoffman/6761bis>. \]
-
+\[ A repository for this draft can be found [here](https://github.com/paulehoffman/6761bis). \]
 
 --- middle
 
@@ -57,8 +56,7 @@ accepting Special-Use Domain Names entries with the IESG.
 There is a long history of RFCs that reserve some domain names for private use.
 {{RFC2606}} reserved ".test", ".example", ".invalid", ".localhost", "example.com", "example.net", and "example.org",
 as well as all names below those names.
-It also created a registry at IANA called "special-use domain names"
-at <https://www.iana.org/assignments/special-use-domain-names>
+It also created a registry at IANA called ["special-use domain names"](https://www.iana.org/assignments/special-use-domain-names)
 for those names and for future names assigned by the IETF.
 
 This document obsoletes {{RFC6761}}.
@@ -110,8 +108,8 @@ It also contained the registration for ".local".
 All of these were placed in the Special-Use Domain Names registry.
 
 After that, the registry became contentious, with many parties asking to have top-level names that were related
-to their protocols added to the registry. In September 2014, the IAB issued a liaison statment,
-<https://datatracker.ietf.org/liaison/1351/>, to ICANN concerning the registry.
+to their protocols added to the registry. In September 2014, the IAB issued a
+[liaison statment](https://datatracker.ietf.org/liaison/1351/) to ICANN concerning the registry.
 That statement said in part:
 
   Under its current charter, the DNSOP working group in the IETF is
@@ -122,7 +120,7 @@ That statement said in part:
   modification to the process in RFC 6761 to reduce the potential for
   collisions in the future.
 
-In September 2015, the IETF published a blog post, <https://www.ietf.org/blog/onion/>,
+In September 2015, the IETF published a [blog post](https://www.ietf.org/blog/onion/),
 It says in part:
 
   ...the IESG believes RFC 6761 needs action, and substantial community
