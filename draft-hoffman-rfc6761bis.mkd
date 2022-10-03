@@ -28,8 +28,8 @@ author:
    email: paul.hoffman@icann.org
 
 normative:
-  RFC5226:
   RFC6761:
+  RFC8126:
   RFC8499:
 
 informative:
@@ -74,8 +74,20 @@ In this document, "domain name" means a name in the global DNS as defined in {{R
 # Requirements for the Special-Use Domain Names Registry
 
 In order to be added to the Special-Use Domain Names registry, a domain name needs to be specified
-in an IETF "Standards Action" RFC or an "IESG Approval" specification. These terms are defined in {{RFC5226}}.
-A specification does not need to be an RFC. Both types of documents require IESG approval.
+in an IETF "Standards Action" RFC or an "IESG Approval" specification. These terms are defined in {{RFC8126}}
+as:
+
+Standards Action:
+: For the Standards Action policy, values are assigned only through
+Standards Track or Best Current Practice RFCs in the IETF Stream.
+
+IESG Approval:
+: New assignments may be approved by the IESG.  Although there is no
+requirement that the request be documented in an RFC, the IESG has
+the discretion to request documents or other supporting materials on
+a case-by-case basis.
+
+A specification for this registry does not need to be an RFC.
 
 RFC 6761 said that its process applied when a name required special handling in order to implement some desired new functionality.
 This document drops that requirement and the associated requirements for documenting all the types of special handling required.
