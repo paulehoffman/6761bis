@@ -94,7 +94,7 @@ This document drops that requirement and the associated requirements for documen
 
 Of course, the IESG should require that all use case assumptions and requirements for the names added to the registry
 be wholly contained in the RFC or specification defining that name.
-However, the level of that requirement is controlled by the IESG, not this document.
+However, the level of that requirement is controlled by the IESG for each name, not by this document.
 It is the IESG that decide whether to add new names that are top-level names (such as ".example"),
 or names at the second level of existing Special Domains (such as "example.arpa").
 
@@ -122,22 +122,20 @@ That statement said in part:
   modification to the process in RFC 6761 to reduce the potential for
   collisions in the future.
 
-In that period, only one name, ".onion" {{RFC7686}} from October 2015, was added to the registry.
-Just before that, the IETF published a blog post, <https://www.ietf.org/blog/onion/>,
+In September 2015, the IETF published a blog post, <https://www.ietf.org/blog/onion/>,
 It says in part:
 
   ...the IESG believes RFC 6761 needs action, and substantial community
   input. It needs to be open for review and modification because the
   current process is unscalable. 
 
-However, after a great deal of effort, the DNSOP Working Group could not reach consensus on how to move forward with any names
-other than ".onion".
-The DNSOP WG and IESG can consider amending the DNSOP Working Group charter to remove the responsibility for
-special-use domain names from the charter.
+Soon after, only one name, ".onion" {{RFC7686}} from October 2015, was added to the registry.
 
+Even with a great deal of subsequent effort, the DNSOP Working Group could not reach consensus on how to move forward with any names other than ".onion".
 After that, the only names added to the registry were six names under ".arpa".
-Of those, only one RFC specifying those names followed the requirements in RFC 6761 for documenting
-all the types of special handling required.
+Of those, only one RFC specifying those names followed the requirements in RFC 6761 for documenting all the types of special handling required.
+
+In the future, the DNSOP WG and IESG can consider amending the DNSOP Working Group charter to remove the responsibility of the DNSOP WG for special-use domain names.
 
 
 # IANA Considerations
